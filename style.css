@@ -1,0 +1,98 @@
+* { box-sizing: border-box; }
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header { padding: 50px 20px 20px; }
+h1 { font-size: 2.5rem; margin-bottom: 10px; }
+#countdown { font-size: 1.8rem; margin-top: 10px; font-weight: bold; }
+
+section { padding: 40px 15px; }
+
+/* Lettre animée */
+#letter { display: flex; flex-direction: column; align-items: center; }
+.letter-box {
+  background: #fff; padding: 40px 30px; max-width: 700px;
+  border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: left; line-height: 1.8; font-size: 1.1rem;
+}
+#letter h2 { margin-bottom: 30px; font-size: 2rem; }
+
+/* Galerie photos */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px; max-width: 1000px; margin: 0 auto;
+}
+.photos img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
+
+/* Vidéos */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; max-width: 1000px; margin: 0 auto;
+}
+video, iframe { width: 100%; height: auto; aspect-ratio: 16/9; border-radius: 15px; }
+
+/* Formulaire WhatsApp */
+form { max-width: 400px; margin: 0 auto; }
+input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; }
+button { padding: 10px; font-size: 1rem; border: none; border-radius: 8px; background-color: #ff69b4; color: white; cursor: pointer; }
+button:active { transform: scale(1.1); transition: transform 0.2s; }
+button:hover { background-color: #ff85c1; }
+
+footer { padding: 20px; background-color: #ffe6b3; margin-top: 40px; }
+
+/* Confettis */
+.confetti {
+  position: fixed; top: -10px; width: 10px; height: 10px;
+  opacity: 0.9; border-radius: 50%; pointer-events: none; z-index: 9999;
+  animation-name: fall; animation-timing-function: linear; animation-fill-mode: forwards;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .photos img { height: 160px; }
+}
+/* Police générale du site */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Titres principaux */
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+/* H3, paragraphes, textes secondaires restent Roboto */
+p, li, input, textarea, button {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 2.8rem;
+  color: #ff3399;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff66b2;
+  margin-bottom: 20px;
+}

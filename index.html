@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyeux 20 ans !</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Confettis tomberont sur toute la page -->
+  
+  <header>
+    <h1>🎉 Joyeux 20 ans, DELA ! 🎉</h1>
+    <p>Le compte à rebours avant ton grand jour :</p>
+    <div id="countdown"></div>
+  </header>
+
+  <!-- Section lettre animée -->
+  <section id="letter">
+    <h2>💌 Une lettre pour tes 20 ans</h2>
+    <div class="letter-box">
+      <p id="typedText"></p>
+    </div>
+  </section>
+
+  <!-- Section galerie photos -->
+  <section id="gallery">
+    <h2>Galerie de souvenirs</h2>
+    <div class="photos">
+      <img src="assets/img/dela1.jpeg" alt="Souvenir 1">
+      <img src="assets/img/dela2.jpeg" alt="Souvenir 2">
+      <img src="assets/img/dela3.jpeg" alt="Souvenir 3">
+      <img src="assets/img/dela4.jpeg" alt="Souvenir 4">
+      <img src="assets/img/dela5.jpeg" alt="Souvenir 5">
+    </div>
+  </section>
+
+  <!-- Section vidéos -->
+  <section id="videos">
+    <h2>🎬 Vidéos souvenirs</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="assets/vidéo/delavideo1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Section WhatsApp -->
+  <section id="messages">
+    <h2>Laisse un message via WhatsApp</h2>
+    <form onsubmit="sendWhatsApp(event)">
+      <input type="text" id="name" placeholder="Ton nom" required>
+      <textarea id="message" placeholder="Ton message pour ses 20 ans 💖" required></textarea>
+      <button type="submit">Envoyer sur WhatsApp 🎁</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Avec ❤️❤️❤️ de la part de MAEL</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
